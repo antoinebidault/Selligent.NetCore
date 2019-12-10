@@ -7,18 +7,41 @@
 
 The purpose of this library is to porvide a reliable .Net core REST Client for Selligent
 
-# Getting Started
+# Available clients
+
+- MediumClient
+- NotificationGroupClient
+- OrganizationClient
+- ContentClient
+- DataExportClient
+- DataImportClient
+- JourneyClient
+- ABClient
+- CustomeClient
+- RecurringCliennt
+- SingleBatchClient
+- TransactionalClient
+- TransactionalBulkClient
+- TransactionalShortcutClient
+- ListClient
+- DataClient
+- TaskClient
+- StatusClient
+- StoredProcedureClient
+
+# Simple us case
 
 ```CSharp
+var client = new MediumClient(new SelligentClientConfiguration(){
+ BaseUrl = "{Paste your api url here e.g. https://yourapi.com/Api/ }",
+ PublicKey = "{Your API key}",
+ PrivateKey = "{Your API secret key}",
+});
 
-```
-
-# Use case
-
-```CSharp
+var dataFromApi = await client.GetMediumsAsync();
 
 ```
 
 # Build and Test
 
-# Contribute
+todo
