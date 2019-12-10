@@ -2,56 +2,10 @@
   "runtime": "NetCore21",
   "defaultVariables": null,
   "documentGenerator": {
-    "webApiToOpenApi": {
-     
-      "isAspNetCore": true,
-      "resolveJsonOptions": false,
-      "defaultUrlTemplate": "api/{controller}/{id?}",
-      "addMissingPathParameters": false,
-      "includedVersions": null,
-      "defaultPropertyNameHandling": "Default",
-      "defaultReferenceTypeNullHandling": "Null",
-      "defaultDictionaryValueReferenceTypeNullHandling": "NotNull",
-      "defaultResponseReferenceTypeNullHandling": "NotNull",
-      "defaultEnumHandling": "Integer",
-      "flattenInheritanceHierarchy": false,
-      "generateKnownTypes": true,
-      "generateEnumMappingDescription": false,
-      "generateXmlObjects": false,
-      "generateAbstractProperties": false,
-      "generateAbstractSchemas": true,
-      "ignoreObsoleteProperties": false,
-      "allowReferencesWithProperties": false,
-      "excludedTypeNames": [],
-      "serviceHost": null,
-      "serviceBasePath": null,
-      "serviceSchemes": [],
-      "infoTitle": "Client API Rest ToolKAt",
-      "infoDescription": null,
-      "infoVersion": "1.0.0",
-      "documentTemplate": null,
-      "documentProcessorTypes": [],
-      "operationProcessorTypes": [],
-      "typeNameGeneratorType": null,
-      "schemaNameGeneratorType": null,
-      "contractResolverType": null,
-      "serializerSettingsType": null,
-      "useDocumentProvider": true,
-      "documentName": "v1",
-      "aspNetCoreEnvironment": null,
-      "createWebHostBuilderMethod": null,
-      "startupType": null,
-      "allowNullableBodyParameters": true,
-      "output": null,
-      "outputType": "Swagger2",
-      "assemblyPaths": [
-        "bin/Release/netcoreapp2.1/Ngpa.ToolKat.Api.dll"
-      ],
-      "assemblyConfig": null,
-      "referencePaths": [
-        "bin/Release/netcoreapp2.1"
-      ],
-      "useNuGetCache": false
+    "fromDocument": {
+      "json": "v1.json",
+      "url": "http://redocly.github.io/redoc/openapi.yaml",
+      "output": null
     }
   },
   "codeGenerators": {
@@ -108,11 +62,10 @@
       "propertyNameGeneratorType": null,
       "enumNameGeneratorType": null,
       "serviceHost": null,
-      "serviceSchemes": null,
-      "output": "ClientApp/client.ts"
+      "serviceSchemes": null
     },
     "openApiToCSharpClient": {
-      "clientBaseClass": "ClientBase",
+      "clientBaseClass": "BaseSelligentClient",
       "configurationClass": "ClientConfiguration",
       "generateClientClasses": true,
       "generateClientInterfaces": false,
@@ -153,7 +106,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "Ngpa.ToolKat.Api.Client",
+      "namespace": "Selligent.NetCore",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -187,7 +140,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../../Libs/Ngpa.ToolKat.API.Client/Client.cs"
+      "output": "../Selligent.NetCore/SelligentClient.cs"
     }
   }
 }

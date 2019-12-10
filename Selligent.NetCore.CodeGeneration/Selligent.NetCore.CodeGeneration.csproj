@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    
     <PackageReference Include="NSwag.MSBuild" Version="13.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -14,7 +15,7 @@
   </ItemGroup>
   
 
-  <Target Name="NSwag" AfterTargets="AfterBuild" Condition="$(Configuration)=='Release'">
+  <Target Name="NSwag" AfterTargets="AfterBuild">
     <Copy SourceFiles="@(Reference)" DestinationFolder="$(OutDir)References" />
     <Exec Command="$(NSwagExe_Core21) run nswag.json /variables:Configuration=$(Configuration)" />
     <RemoveDir Directories="$(OutDir)References" />
