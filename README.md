@@ -1,3 +1,5 @@
+(selligent.png)[selligent.png]
+
 # Introduction
 
 The purpose of this library is to porvide a reliable .Net core REST Client for Selligent
@@ -5,7 +7,7 @@ The purpose of this library is to porvide a reliable .Net core REST Client for S
 # Getting Started
 
 ```CSharp
-nugget-package install
+
 ```
 
 # Use case
