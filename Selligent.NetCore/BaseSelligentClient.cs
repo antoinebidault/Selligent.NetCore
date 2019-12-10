@@ -11,7 +11,7 @@ namespace Selligent.NetCore
     private readonly string _publicKey;
     public readonly string _privateKey;
 
-    public BaseSelligentClient(ClientConfiguration clientConfig)
+    public BaseSelligentClient(SelligentClientConfiguration clientConfig)
     {
       BaseUrl = clientConfig.BaseUrl;
       _publicKey = clientConfig.PublicKey;
