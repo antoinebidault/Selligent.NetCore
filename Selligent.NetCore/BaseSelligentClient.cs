@@ -23,7 +23,7 @@ namespace Selligent.NetCore
     {
       var msg = new HttpRequestMessage();
       // Set the bearer 
-      msg.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", $"{_publicKey}:{_privateKey}");
+      msg.Headers.Add("X-ApiKey", $"{_publicKey}:{_privateKey}");
 
       return await System.Threading.Tasks.Task.FromResult<HttpRequestMessage>(msg);
     }
