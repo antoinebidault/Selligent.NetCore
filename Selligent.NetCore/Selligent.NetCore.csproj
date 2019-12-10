@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.1;netstandard2.0</TargetFrameworks>
+    <PackageTags>Selligent,Marketing,Automation,API,API Rest,API Client,.Net Core,.Net Standard</PackageTags>
+    <RepositoryUrl>https://github.com/antoinebidault/Selligent.NetCore</RepositoryUrl>
+    <Copyright>MIT</Copyright>
+    <Description>A .Net core/standard REST Client for Selligent marketing cloud built on top of NSwag toolchain</Description>
+    <Company>NGPA</Company>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.1|AnyCPU'">
@@ -20,6 +26,10 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
+  
+    <ItemGroup>
+      <Folder Include="Properties\" />
+    </ItemGroup>
  
 
 </Project>

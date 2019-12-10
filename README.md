@@ -1,7 +1,7 @@
 
 [![Build Status](https://dev.azure.com/NGPA/NGPA%20Devops/_apis/build/status/Ngpa.Selligent?branchName=master)](https://dev.azure.com/NGPA/NGPA%20Devops/_build/latest?definitionId=23&branchName=master)
 
-!(selligent)[/selligent.png]
+!(selligent)[./selligent.png]
 
 # Introduction
 
@@ -44,4 +44,4 @@ var dataFromApi = await client.GetMediumsAsync();
 
 # Build and Test
 
-todo
+Build the solution and go !
