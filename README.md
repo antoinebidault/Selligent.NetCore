@@ -55,10 +55,8 @@ try
   data["MEDIA"] = "MyMedia";
 
   //  Correspond à la liste d'envoi
-  data["THEME"] = member.ListIds.FirstOrDefault() ?? "LMA";
-
-
-
+  data["THEME"] = "YourList";
+  
   var response = new CustomClient(_config)
       .TriggerEntryPointAsync(
           "inscription_liste",
