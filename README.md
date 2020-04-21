@@ -47,14 +47,13 @@ var dataFromApi = await client.GetMediumsAsync();
  ```CSharp
 try
 {
+  var data = new Dictionary<string,string>();
   data["MAIL"] = "test@test.com";
   data["ABONNEMENT"] = "1";
   data["API"] = "1";
   data["SOURCE"] ="TEST";
   data["CANAL"] = "1";
   data["MEDIA"] = "MyMedia";
-
-  //  Correspond à la liste d'envoi
   data["THEME"] = "YourList";
   
   var response = new CustomClient(_config)
