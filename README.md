@@ -42,6 +42,52 @@ var dataFromApi = await client.GetMediumsAsync();
 
 ```
 
+ # Sample use (Journey's trigger)
+ 
+ ```CSharp
+try
+{
+  data["MAIL"] = "test@test.com";
+  data["ABONNEMENT"] = "1";
+  data["API"] = "1";
+  data["SOURCE"] ="TEST";
+  data["CANAL"] = "1";
+  data["MEDIA"] = "MyMedia";
+
+  //  Correspond à la liste d'envoi
+  data["THEME"] = member.ListIds.FirstOrDefault() ?? "LMA";
+
+
+
+  var response = new CustomClient(_config)
+      .TriggerEntryPointAsync(
+          "inscription_liste",
+          "liste_abo",
+          new Trigger_journey_entry_points_request(data, null),
+          "ngpa_preprod").Result;
+
+  if (response.Result_code == Trigger_journey_entry_point_responseResult_code.Succeeded || 
+      response.Result_code == Trigger_journey_entry_point_responseResult_code.PartiallySucceeded)
+  {
+    return new MemberCreationResult()
+    {
+      Success = true
+    };
+  } else {
+    throw new Exception(response.Body);
+  }
+}
+catch (Exception e)
+{
+  return new MemberCreationResult()
+  {
+    Success = false,
+    Message = e.Message
+  };
+}
+ ```
+
+
 # Build and Test
 
 Build the solution and go !
